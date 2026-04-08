@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="twitter:card" content="summary_large_image">
+  <meta charset="UTF-8">
+  <title>Peaceful Wooden Bench</title>
   
+  <meta http-equiv="refresh" content="5;url=YOUR_MONEY_TAG_LINK_HERE">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Click here to view on Unsplash">
+  <meta name="twitter:description" content="View this peaceful wooden bench in high resolution.">
+  <meta name="twitter:image" content="https://multi-xcess.github.io/multi-xcess/peaceful-bench.jpg">
+
+  <meta property="og:type" content="website">
   <meta property="og:image" content="https://multi-xcess.github.io/multi-xcess/peaceful-bench.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  
-  <meta name="twitter:title" content="Click here to view on Unsplash">
-  <meta name="twitter:description" content="A peaceful view of a wooden bench in a green field.">
+  <meta property="og:url" content="https://multi-xcess.github.io/multi-xcess/peaceful-bench.html">
 
-  <meta property="og:url" content="https://unsplash.com/photos/a-wooden-bench-sitting-on-top-of-a-lush-green-field-79VVCHQQ0zg">
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f4; }
+    .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    img { width: 100%; border-radius: 10px; margin-bottom: 20px; }
+    .loader { color: #555; font-size: 18px; }
+  </style>
 </head>
 <body>
-  <h1>Ppeaceful Wooden Bench</h1>
-  <p>Click <a href="https://unsplash.com/photos/a-wooden-bench-sitting-on-top-of-a-lush-green-field-79VVCHQQ0zg">here</a> to go to Unsplash.</p>
+
+  <div class="container">
+    <h1>Peaceful Wooden Bench</h1>
+    <img src="https://multi-xcess.github.io/multi-xcess/peaceful-bench.jpg" alt="Wooden Bench">
+    
+    <div class="loader">
+      <p>Redirecting to gallery in <span id="countdown">5</span> seconds...</p>
+      <p><small>If you are not redirected, <a href="YOUR_MONEY_TAG_LINK_HERE">click here</a>.</small></p>
+    </div>
+  </div>
+
+  <script>
+    // Countdown Display
+    var timeleft = 4 ;
+    var downloadTimer = setInterval(function(){
+      if(timeleft <= 0){
+        clearInterval(downloadTimer);
+      } else {
+        document.getElementById("countdown").innerHTML = timeleft;
+      }
+      timeleft -= 1;
+    }, 1000);
+
+    // JavaScript Redirect Backup
+    setTimeout(function(){
+       window.location.href = 'https://unsplash.com/s/photos/cricket';
+    }, 5000); 
+  </script>
+
 </body>
 </html>
