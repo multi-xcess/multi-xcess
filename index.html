@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic X Card</title>
+
+  <!-- Default fallback values -->
+  <meta property="og:title" content="Dynamic X Card">
+  <meta property="og:description" content="Custom description">
+  <meta property="og:image" content="https://via.placeholder.com/1200x628.png?text=Preview">
+  <meta property="og:url" content="https://yourusername.github.io/x-card-generator/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dynamic X Card">
+  <meta name="twitter:description" content="Custom description">
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x628.png?text=Preview">
+  <meta name="twitter:url" content="https://yourusername.github.io/x-card-generator/">
+
+  <script>
+    function getQueryParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name) || '';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const title = getQueryParam('title');
+      const desc = getQueryParam('description');
+      const image = getQueryParam('image');
+      const url = getQueryParam('url');
+
+      if(title) {
+        document.querySelector('meta[property="og:title"]').setAttribute('content', title);
+        document.querySelector('meta[name="twitter:title"]').setAttribute('content', title);
+      }
+      if(desc) {
+        document.querySelector('meta[property="og:description"]').setAttribute('content', desc);
+        document.querySelector('meta[name="twitter:description"]').setAttribute('content', desc);
+      }
+      if(image) {
+        document.querySelector('meta[property="og:image"]').setAttribute('content', image);
+        document.querySelector('meta[name="twitter:image"]').setAttribute('content', image);
+      }
+      if(url) {
+        document.querySelector('meta[property="og:url"]').setAttribute('content', url);
+        document.querySelector('meta[name="twitter:url"]').setAttribute('content', url);
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Dynamic X Card Generator</h1>
+  <p>Use query parameters: <code>?title=...&description=...&image=...&url=...</code></p>
+</body>
+</html>
